@@ -5,36 +5,63 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ربات چندمنظوره جولین</title>
+    
     <style>
+        @font-face {
+            font-family: 'IranNastaliq';
+            src: url('IranNastaliq.ttf') format('truetype');
+            font-weight: bold;
+            font-style: normal;
+            font-display: swap; /* اضافه کردن این خط */
+        }
+
         body {
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start; /* Align items to the top */
             height: 100vh;
-            background-color: #f0f0f0;
+            background-image: url('back.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             text-align: center;
-            direction: rtl; /* برای چیدمان متون به زبان فارسی */
+            direction: rtl;
         }
 
         .container {
             display: flex;
             flex-direction: column;
             align-items: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            margin-top: 20px; /* Add margin from top */
         }
 
         .container img {
             width: 150px;
             height: auto;
+            margin-bottom: 10px;
+            loading: lazy; /* اضافه کردن این خط */
         }
 
         .container p {
-            color: #000; /* رنگ متن سیاه */
-            font-size: 16px;
-            margin-top: 10px;
-            font-family: Arial, sans-serif;
+            font-family: 'IranNastaliq', sans-serif;
+            color: #ad2d2d;
+            font-size: 40px;
+            margin: 0;
             font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            .container p {
+                font-size: 30px;
+            }
+            .container img {
+                width: 120px;
+            }
         }
     </style>
 </head>
@@ -46,9 +73,12 @@
 </div>
 
 <script>
-    setTimeout(() => {
-        window.location.href = "https://yasinp.ir/%D8%B3%DB%8C%D8%AF/";
-    }, 200);
+    // بارگذاری اسکریپت در انتهای body به جای head
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            window.location.href = "https://yasinp.ir/%D8%B3%DB%8C%D8%AF/";
+        }, 2000);
+    });
 </script>
 
 </body>
