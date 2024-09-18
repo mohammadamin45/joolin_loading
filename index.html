@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>ربات چندمنظوره جولین</title>
     
     <style>
@@ -12,7 +12,7 @@
             src: url('IranNastaliq.ttf') format('truetype');
             font-weight: bold;
             font-style: normal;
-            font-display: swap; /* اضافه کردن این خط */
+            font-display: swap;
         }
 
         body {
@@ -20,7 +20,7 @@
             padding: 0;
             display: flex;
             justify-content: center;
-            align-items: flex-start; /* Align items to the top */
+            align-items: flex-start;
             height: 100vh;
             background-image: url('back.jpg');
             background-size: cover;
@@ -37,14 +37,14 @@
             padding: 20px;
             background: rgba(255, 255, 255, 0.8);
             border-radius: 10px;
-            margin-top: 20px; /* Add margin from top */
+            margin-top: 20px;
         }
 
         .container img {
             width: 150px;
             height: auto;
             margin-bottom: 10px;
-            loading: lazy; /* اضافه کردن این خط */
+            loading: lazy;
         }
 
         .container p {
@@ -73,11 +73,14 @@
 </div>
 
 <script>
-    // بارگذاری اسکریپت در انتهای body به جای head
     window.addEventListener('load', () => {
         setTimeout(() => {
             window.location.href = "https://yasinp.ir/%D8%B3%DB%8C%D8%AF/";
         }, 2000);
+    });
+
+    document.addEventListener('contextmenu', (event) => {
+        event.preventDefault();
     });
 </script>
 
